@@ -5277,7 +5277,6 @@
       "sha512": "G3AucI4L33Mu/PgwuWmx/519XOC0OFnJIY55uN6Rlxz03wcZEcCagJ5q+/xrqa8UAY3Nmxev+VdvNBOGPH1qbw==",
       "type": "package",
       "path": "microsoft.aspnetcore.razor.design/2.2.0-preview2-35157",
-      "hasTools": true,
       "files": [
         ".signature.p7s",
         "build/netstandard2.0/Microsoft.AspNetCore.Razor.Design.CodeGeneration.targets",
@@ -5635,7 +5634,6 @@
       "sha512": "HS3iRWZKcUw/8eZ/08GXKY2Bn7xNzQPzf8gRPHGSowX7u7XXu9i9YEaBeBNKUXWfI7qjvT2zXtLUvbN0hds8vg==",
       "type": "package",
       "path": "microsoft.codeanalysis.analyzers/1.1.0",
-      "hasTools": true,
       "files": [
         "ThirdPartyNotices.rtf",
         "analyzers/dotnet/cs/Microsoft.CodeAnalysis.Analyzers.dll",
@@ -5860,7 +5858,6 @@
       "sha512": "CTsP4HjMYLT61mvNHlse68Hsxo9/nVHsDD0mnGBpFtgAQZYqXOVmX5jDO1n+mZDFm4ROWRZc9rtQ3uNt7ZsqvA==",
       "type": "package",
       "path": "microsoft.entityframeworkcore.tools/2.2.0-preview2-35157",
-      "hasTools": true,
       "files": [
         ".signature.p7s",
         "lib/netstandard2.0/_._",
@@ -11673,11 +11670,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\QuanDar\\source\\repos\\BoerZoektKlant\\BoerZoektKlant\\BoerZoektKlant.csproj",
+      "projectUniqueName": "C:\\Users\\QuanDar\\Documents\\GitHub\\mobile_dev_boer_zoekt_klanten\\BoerZoektKlant\\BoerZoektKlant\\BoerZoektKlant.csproj",
       "projectName": "BoerZoektKlant",
-      "projectPath": "C:\\Users\\QuanDar\\source\\repos\\BoerZoektKlant\\BoerZoektKlant\\BoerZoektKlant.csproj",
+      "projectPath": "C:\\Users\\QuanDar\\Documents\\GitHub\\mobile_dev_boer_zoekt_klanten\\BoerZoektKlant\\BoerZoektKlant\\BoerZoektKlant.csproj",
       "packagesPath": "C:\\Users\\QuanDar\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\QuanDar\\source\\repos\\BoerZoektKlant\\BoerZoektKlant\\obj\\",
+      "outputPath": "C:\\Users\\QuanDar\\Documents\\GitHub\\mobile_dev_boer_zoekt_klanten\\BoerZoektKlant\\BoerZoektKlant\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

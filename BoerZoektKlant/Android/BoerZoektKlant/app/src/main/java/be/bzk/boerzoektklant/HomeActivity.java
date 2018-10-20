@@ -3,15 +3,12 @@ package be.bzk.boerzoektklant;
 import android.graphics.BitmapFactory;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.ListView;
 
 import java.util.ArrayList;
 
 import be.bzk.boerzoektklant.adapters.BusinessAdapter;
-import be.bzk.boerzoektklant.models.Business;
+import be.bzk.boerzoektklant.data.models.Business;
 
 public class HomeActivity extends AppCompatActivity {
 

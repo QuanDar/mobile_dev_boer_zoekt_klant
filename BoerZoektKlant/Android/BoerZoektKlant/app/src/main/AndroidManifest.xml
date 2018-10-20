@@ -20,5 +20,5 @@
             android:name=".activities.FarmerActivity"
             android:label="@string/title_activity_farmer" />
     </application>
-
+    <uses-permission android:name="android.permission.INTERNET" />
 </manifest>

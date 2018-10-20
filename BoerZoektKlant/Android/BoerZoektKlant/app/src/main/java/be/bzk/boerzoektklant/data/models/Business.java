@@ -1,4 +1,4 @@
-package be.bzk.boerzoektklant.models;
+package be.bzk.boerzoektklant.data.models;
 
 import android.graphics.Bitmap;
 

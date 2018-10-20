@@ -1,4 +1,4 @@
-package be.bzk.boerzoektklant.models;
+package be.bzk.boerzoektklant.data.models;
 
 public class Category {
     private int id;

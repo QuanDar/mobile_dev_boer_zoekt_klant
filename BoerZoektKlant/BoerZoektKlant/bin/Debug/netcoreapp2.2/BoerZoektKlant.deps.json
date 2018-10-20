@@ -25,6 +25,7 @@
       "BoerZoektKlant/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.App": "2.2.0-preview2-35157",
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "2.2.0-preview2-35157",
           "Microsoft.AspNetCore.Razor.Design": "2.2.0-preview2-35157",
           "Microsoft.NETCore.App": "2.2.0-preview2-26905-02"
         },

@@ -11,9 +11,10 @@ namespace BoerZoektKlant.Models.App
         public string Title { get; set; }
         public string Description { get; set; }
         public string Excerpt { get; set; }
-        public Uri ImageUrl { get; set; }
+        public string ImageUrl { get; set; }
         public int Rating { get; set; }
         public string PhoneNumber { get; set; }
         public List<Prices> Prices { get; set; }
+        public List<Category> Categories { get; set; }  
     }
 }

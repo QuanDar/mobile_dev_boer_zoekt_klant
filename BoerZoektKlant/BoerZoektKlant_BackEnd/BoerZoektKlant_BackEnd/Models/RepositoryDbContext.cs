@@ -43,6 +43,14 @@ namespace BoerZoektKlant_BackEnd.Models
                     Rating = 3,
                     Title = "Super Titel",
                     Excerpt = "This is an excerpt"
+                },
+                new Business
+                {
+                    Id = 3,
+                    Description = "asdasfg sdgfSDF asdaswwd sakopdasopjf jadsiofgn aosdeinionfgi sndeiognsod;oigfnsoingrn",
+                    Rating = 3,
+                    Title = "Super Titel",
+                    Excerpt = "This is an excerpt"
                 }
                 );
 

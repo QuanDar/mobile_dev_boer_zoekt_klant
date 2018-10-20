@@ -9,12 +9,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import be.bzk.boerzoektklant.adapters.BusinessAdapter;
-<<<<<<< HEAD
 import be.bzk.boerzoektklant.data.models.Business;
-=======
 import be.bzk.boerzoektklant.models.Business;
 import be.bzk.boerzoektklant.models.Category;
->>>>>>> ff6221f19381e9f2690ffbb7323bd9b30f525d63
+
 
 public class HomeActivity extends AppCompatActivity {
 

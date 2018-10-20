@@ -47,7 +47,7 @@ namespace BoerZoektKlant_BackEnd.Models
                 new Business
                 {
                     Id = 3,
-                    Description = "asdasfg sdgfSDF asdaswwd sakopdasopjf jadsiofgn aosdeinionfgi sndeiognsod;oigfnssoingrn",
+                    Description = "asdasfg sdgfSDF asdasswwd sakopdasopjf jadsiofgn aosdeinionfgi sndeiognsod;oigfnssoingrn",
                     Rating = 3,
                     Title = "Super Titel",
                     Excerpt = "This is an excerpt"

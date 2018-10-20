@@ -6,46 +6,51 @@ import android.os.Bundle;
 import android.widget.ListView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import be.bzk.boerzoektklant.adapters.BusinessAdapter;
+<<<<<<< HEAD
 import be.bzk.boerzoektklant.data.models.Business;
+=======
+import be.bzk.boerzoektklant.models.Business;
+import be.bzk.boerzoektklant.models.Category;
+>>>>>>> ff6221f19381e9f2690ffbb7323bd9b30f525d63
 
 public class HomeActivity extends AppCompatActivity {
+
+    private BusinessAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        // Construct the data source
+    // Construct the data source
         ArrayList<Business> businessArrayList = new ArrayList<Business>();
-// Create the adapter to convert the array to views
-        BusinessAdapter adapter = new BusinessAdapter(this, businessArrayList);
+    // Create the adapter to convert the array to views
+        adapter = new BusinessAdapter(this, businessArrayList);
 
+        List<Category> list = new ArrayList<Category>();
+        list.add(new Category(1, "eieren"));
+        list.add(new Category(1, "kip"));
+
+        this.addBussiness("Boer Jos", "Selder en knollen te koopdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd", list);
+        this.addBussiness("Boer Karel", "Selder en knollen te koop", list);
+        this.addBussiness("Boer Jain", "Selder en knollen te koop", list);
+
+    }
+
+    public void addBussiness(String name, String excerpt, List<Category> categories) //Bitmap toevoegen?
+    {
         Business newBusiness = new Business();
-        newBusiness.setTitle( "This is a title");
-        newBusiness.setExcerpt("This is an introduction");
+        newBusiness.setTitle(name);
+        newBusiness.setExcerpt(excerpt);
+        newBusiness.setCategories(categories);
         newBusiness.setImageBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.user));
         adapter.add(newBusiness);
 
-// Attach the adapter to a ListView
+        // Attach the adapter to a ListView
         ListView listView = (ListView) findViewById(R.id.farmerList);
         listView.setAdapter(adapter);
     }
-
-//    private void addBoerItem(Bitmap bitmap, String name, String description, String category){
-//        BoerListItem boerItem = new BoerListItem();
-//
-//        boerItem.setImagePath(bitmap);
-//        boerItem.setName(name);
-//        boerItem.setDescription(description);
-//        boerItem.setCategory(category);
-//
-//        boerListItems.add(boerItem);
-//    }
-//
-//    private void addArrayToList(){
-//        if (boerListItems != null && boerListItems.size() > 0)
-//            boerListView.setAdapter(new ListCustomAdapter(getApplicationContext(), boerListItems));
-//    }
 }

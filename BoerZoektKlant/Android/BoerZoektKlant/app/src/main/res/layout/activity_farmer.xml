@@ -30,18 +30,19 @@
                 android:layout_height="0dp"
                 android:textSize="30sp"
                 android:layout_weight=".4"
-                android:text="Boer Jos"
                 android:id="@+id/title"
                 />
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight=".5"
                 android:padding="5dp"
-                android:text="@string/testtext"
                 android:singleLine="false"
+                android:lines="2"
+                android:maxLines="2"
                 android:id="@+id/excerpt"
+
                 />
 
             <TextView
@@ -49,8 +50,7 @@
                 android:layout_height="0dp"
                 android:layout_weight=".2"
                 android:textSize="12sp"
-                android:id="@+id/categories"
-                android:text="Kip | Eieren | Varken"/>
+                android:id="@+id/categories"/>
         </LinearLayout>
 
     </LinearLayout>

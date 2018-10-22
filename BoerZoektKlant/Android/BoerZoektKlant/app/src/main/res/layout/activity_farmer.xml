@@ -23,26 +23,38 @@
             android:gravity="center"/>
     </LinearLayout>
 
-    <TableLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
-        >
+        android:orientation="vertical">
         <TextView
             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:id="@+id/bulletTextView"
             android:paddingTop="10dp"
             />
         <TextView
             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:id="@+id/phoneNumberTextView"
             android:paddingTop="10dp"
             />
 
-        <TextView android:id="@+id/ratingTextView"
-            android:paddingTop="10dp"
-            />
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ratingBar"
+            android:stepSize="1.0"
+            android:numStars="5"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your Rating: "
+            android:id="@+id/ratingText"/>
+
 
         <TextView
             android:layout_width="match_parent"
@@ -50,8 +62,9 @@
             android:autoLink = "map"
             android:onClick="adressTextViewButtonClick"
             android:paddingTop="10dp"
-
+            android:layout_height="wrap_content"
             />
+
         <fragment xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:map="http://schemas.android.com/apk/res-auto"
             xmlns:tools="http://schemas.android.com/tools"
@@ -62,7 +75,7 @@
             tools:context=".activities.MapsActivity"
             android:paddingTop="10dp"
             />
-    </TableLayout>
+    </LinearLayout>
 
 
 </LinearLayout>

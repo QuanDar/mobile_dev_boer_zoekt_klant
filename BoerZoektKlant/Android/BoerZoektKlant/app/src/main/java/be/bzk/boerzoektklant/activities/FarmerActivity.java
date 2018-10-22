@@ -6,7 +6,9 @@ import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.text.Html;
 import android.view.View;
+import android.widget.RatingBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -19,9 +21,11 @@ import be.bzk.boerzoektklant.R;
 
 public class FarmerActivity extends FragmentActivity implements OnMapReadyCallback {
 
-    private GoogleMap mMap;
-    TextView adressTextView;
-    TextView ratingTextView;
+    public GoogleMap mMap;
+    public TextView adressTextView;
+    public RatingBar ratingBar;
+    public  TextView ratingText;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,40 +41,28 @@ public class FarmerActivity extends FragmentActivity implements OnMapReadyCallba
                 "• Lekkere grote vleeskoe<br/>"+
                 "• En schaap, ook lekker veel groot vlees";
 
-        TextView mTextViewThird = (TextView) findViewById(R.id.bulletTextView);
+        TextView mTextViewThird = findViewById(R.id.bulletTextView);
         mTextViewThird.setText(Html.fromHtml(htmlString));
 
-        TextView phoneNumberTextView = (TextView) findViewById(R.id.phoneNumberTextView);
+        TextView phoneNumberTextView = findViewById(R.id.phoneNumberTextView);
         phoneNumberTextView.setText("Telefoonnummer: +32 42463463");
 
-        adressTextView = (TextView) findViewById(R.id.adressTextView);
+        adressTextView = findViewById(R.id.adressTextView);
         adressTextView.setText("Address: 3500 Hasselt | Elfde-Liniestraat 23");
 
-        ratingTextView = (TextView) findViewById(R.id.ratingTextView);
-        ratingTextView.setText("Rating: ");
-        ratingCalc(4);
+        progressBarSetup();
 
     }
 
-    public void ratingCalc(int rating){
-        switch (rating){
-            case 1:
-                ratingTextView.append("★");
-                break;
-            case 2:
-                ratingTextView.append("★★");
-                break;
-            case 3:
-                ratingTextView.append("★★★");
-                break;
-            case 4:
-                ratingTextView.append("★★★★");
-                break;
-            case 5:
-                ratingTextView.append("★★★★★");
-                break;
-        }
+
+    protected void progressBarSetup() {
+
+        ratingBar = findViewById(R.id.ratingBar);
+        ratingText = findViewById(R.id.ratingText);
+
+        ratingBar.setOnRatingBarChangeListener((ratingBar, rating, fromUser) -> ratingText.setText("Rating: " + rating));
     }
+
 
 
     /**

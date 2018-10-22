@@ -4,7 +4,7 @@ android {
     compileSdkVersion 28
     defaultConfig {
         applicationId "be.bzk.boerzoektklant"
-        minSdkVersion 25
+        minSdkVersion 28
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
@@ -30,7 +30,6 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
-
     //api
     implementation 'com.jakewharton:butterknife:8.8.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
@@ -53,4 +52,8 @@ dependencies {
     annotationProcessor 'com.google.dagger:dagger-android-processor:2.17'
     annotationProcessor 'com.google.dagger:dagger-compiler:2.17'
     //end api
+
+    //maps
+    implementation 'com.google.android.gms:play-services-maps:16.0.0'
+
 }

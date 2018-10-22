@@ -1,7 +1,5 @@
 package be.bzk.boerzoektklant.activities;
 
-import android.content.Intent;
-import android.net.Uri;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.text.Html;
@@ -17,11 +15,10 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 import be.bzk.boerzoektklant.R;
 
-public class FarmerActivity extends FragmentActivity implements OnMapReadyCallback {
+public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
     TextView adressTextView;
-    TextView ratingTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,44 +29,18 @@ public class FarmerActivity extends FragmentActivity implements OnMapReadyCallba
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
-        String htmlString = "Te bieden:<br/>" +
-                "• Lekkere grote vleeskip<br/>"+
-                "• Lekkere grote vleeskoe<br/>"+
-                "• En schaap, ook lekker veel groot vlees";
+        String htmlString = "• First item €<br/>"+
+                "• Second item €<br/>"+
+                "• Third item €";
 
         TextView mTextViewThird = (TextView) findViewById(R.id.bulletTextView);
         mTextViewThird.setText(Html.fromHtml(htmlString));
 
         TextView phoneNumberTextView = (TextView) findViewById(R.id.phoneNumberTextView);
-        phoneNumberTextView.setText("Telefoonnummer: +32 42463463");
+        phoneNumberTextView.setText("+32 42463463");
 
         adressTextView = (TextView) findViewById(R.id.adressTextView);
-        adressTextView.setText("Address: 3500 Hasselt | Elfde-Liniestraat 23");
-
-        ratingTextView = (TextView) findViewById(R.id.ratingTextView);
-        ratingTextView.setText("Rating: ");
-        ratingCalc(4);
-
-    }
-
-    public void ratingCalc(int rating){
-        switch (rating){
-            case 1:
-                ratingTextView.append("★");
-                break;
-            case 2:
-                ratingTextView.append("★★");
-                break;
-            case 3:
-                ratingTextView.append("★★★");
-                break;
-            case 4:
-                ratingTextView.append("★★★★");
-                break;
-            case 5:
-                ratingTextView.append("★★★★★");
-                break;
-        }
+        adressTextView.setText("3500 Hasselt | Elfde-Liniestraat 23");
     }
 
 
@@ -86,19 +57,12 @@ public class FarmerActivity extends FragmentActivity implements OnMapReadyCallba
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
-        // Marker map
-        LatLng adress = new LatLng(50.937154, 5.348635);
-        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(adress,14));
+        // Add a marker in Sydney and move the camera
+        LatLng adress = new LatLng(-50.937154, 5.348635);
         mMap.addMarker(new MarkerOptions().position(adress).title("Super ultra vlees boer"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(adress));
     }
 
-    //set location and make textview clickable to maps
-    public void adressTextViewButtonClick(View view) {
-        String latitude = "50.938207";
-        String longitude = "5.348064";
-        Uri gmmIntentUri = Uri.parse("geo:" + latitude + "," + longitude + "?q=Hasselt Elfde-Liniestraat 23");
-        Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
-        mapIntent.setPackage("com.google.android.apps.maps");
-        startActivity(mapIntent);
-    }
+
+
 }

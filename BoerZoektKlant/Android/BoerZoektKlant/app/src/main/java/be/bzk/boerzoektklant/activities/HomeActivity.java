@@ -1,17 +1,19 @@
-package be.bzk.boerzoektklant;
+package be.bzk.boerzoektklant.activities;
 
+import android.content.Intent;
 import android.graphics.BitmapFactory;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ListView;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import be.bzk.boerzoektklant.R;
 import be.bzk.boerzoektklant.adapters.BusinessAdapter;
 import be.bzk.boerzoektklant.data.models.Business;
-import be.bzk.boerzoektklant.models.Business;
-import be.bzk.boerzoektklant.models.Category;
+import be.bzk.boerzoektklant.data.models.Category;
 
 
 public class HomeActivity extends AppCompatActivity {
@@ -50,5 +52,11 @@ public class HomeActivity extends AppCompatActivity {
         // Attach the adapter to a ListView
         ListView listView = (ListView) findViewById(R.id.farmerList);
         listView.setAdapter(adapter);
+    }
+
+    public void farmerButtonClick(View view) {
+        Intent intent = new Intent(HomeActivity.this, FarmerActivity.class);
+        startActivity(intent);
+
     }
 }

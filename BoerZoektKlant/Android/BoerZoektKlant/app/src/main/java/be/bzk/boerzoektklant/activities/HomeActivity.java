@@ -32,7 +32,7 @@ public class HomeActivity extends AppCompatActivity {
 
         List<Category> list = new ArrayList<Category>();
         list.add(new Category(1, "eieren"));
-        list.add(new Category(1, "kip"));
+        list.add(new Category(2, "kip"));
 
         this.addBussiness("Boer Jos", "Selder en knollen te koopdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd", list);
         this.addBussiness("Boer Karel", "Selder en knollen te koop", list);
@@ -50,7 +50,7 @@ public class HomeActivity extends AppCompatActivity {
         adapter.add(newBusiness);
 
         // Attach the adapter to a ListView
-        ListView listView = (ListView) findViewById(R.id.farmerList);
+        ListView listView = findViewById(R.id.farmerList);
         listView.setAdapter(adapter);
     }
 

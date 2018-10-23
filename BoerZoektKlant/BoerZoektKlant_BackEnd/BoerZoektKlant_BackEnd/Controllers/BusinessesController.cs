@@ -23,9 +23,9 @@ namespace BoerZoektKlant_BackEnd.Controllers
 
         // GET: api/Businesses
         [HttpGet]
-        public IEnumerable<Business> GetBusinesses()
+        public async Task<IActionResult> GetBusinesses()
         {
-            return _context.Businesses;
+            return Ok(_context.Businesses);
         }
 
         // GET: api/Businesses/5

@@ -55,6 +55,11 @@
             android:text="Your Rating: "
             android:id="@+id/ratingText"/>
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Test text: "
+            android:id="@+id/testJsonTextView"/>
 
         <TextView
             android:layout_width="match_parent"

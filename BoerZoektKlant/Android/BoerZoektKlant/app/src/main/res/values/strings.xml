@@ -1,4 +1,15 @@
 <resources>
-    <string name="app_name">BoerZoektKlant</string>
-    <string name="testtext">Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</string>
+
+    <string name="app_name">Android Example</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="title_activity_farmer">Android Example - Bulleted List In A TextView</string>
+
+    <string name="bulleted_list">
+        <li>First item</li>\n
+        <li>Second item</li>\n
+        <li>Third item</li>
+    </string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="title_activity_json_example">activity_json_example</string>
+
 </resources>

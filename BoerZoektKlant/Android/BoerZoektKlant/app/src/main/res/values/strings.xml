@@ -1,9 +1,7 @@
 <resources>
-
     <string name="app_name">Android Example</string>
     <string name="title_activity_settings">Settings</string>
     <string name="title_activity_farmer">Android Example - Bulleted List In A TextView</string>
-
     <string name="bulleted_list">
         <li>First item</li>\n
         <li>Second item</li>\n
@@ -11,5 +9,8 @@
     </string>
     <string name="title_activity_maps">MapsActivity</string>
     <string name="title_activity_json_example">activity_json_example</string>
-
+    <!--fragment_business strings-->
+    <string name="titleTextViewString">titleTextViewString</string>
+    <string name="excerptTextViewString">excerptTextViewString</string>
+    <string name="categoryTextViewString">categoryTextViewString</string>
 </resources>

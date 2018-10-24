@@ -3,6 +3,7 @@ package be.bzk.boerzoektklant.adapters;
 import android.content.Context;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +11,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.io.Console;
 import java.util.ArrayList;
 
 import be.bzk.boerzoektklant.R;
@@ -44,21 +46,22 @@ public class BusinessAdapter extends ArrayAdapter<Business> {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        Business business = (Business) getItem(position);
+        Business business = getItem(position);
+
 
         // Check if an existing view is being reused, otherwise inflate the view
         if (convertView == null) {
-            convertView = LayoutInflater.from(getContext()).inflate(R.layout.activity_farmer, parent, false);
+            convertView = LayoutInflater.from(getContext()).inflate(R.layout.fragment_business, parent, false);
         }
         // Lookup view for data population
-        ImageView image = (ImageView) convertView.findViewById(R.id.image);
-        TextView title = (TextView) convertView.findViewById(R.id.title);
-        TextView excerpt = (TextView) convertView.findViewById(R.id.excerpt);
-        TextView categories = (TextView) convertView.findViewById(R.id.categories);
+        ImageView image = convertView.findViewById(R.id.image);
+        TextView title = convertView.findViewById(R.id.title);
+        TextView excerpt = convertView.findViewById(R.id.excerpt);
+        TextView categories = convertView.findViewById(R.id.categories);
 
 
         // Populate the data into the template view using the data object
-        image.setImageBitmap(business.getImageBitmap());
+        //image.setImageBitmap(business.getImageBitmap());
         title.setText(business.getTitle());
         excerpt.setText(business.getExcerpt());
 
